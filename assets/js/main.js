@@ -116,4 +116,16 @@
       // other options
     });
 
+    $('.site-main-menu li')
+      .on('mouseover', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.children('ul').addClass('active');
+      })
+      .on('mouseleave', function (e) {
+        e.preventDefault();
+        var $this = $(this);
+        $this.children('ul').removeClass('active');
+      })
+
 }(jQuery));
