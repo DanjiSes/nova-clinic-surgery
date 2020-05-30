@@ -80,7 +80,7 @@ a:hover { text-decoration: none }
 	background: #043778;
 }
 
-.site-main-menu li ul {
+.site-main-menu:not(.menu-mobile) li ul {
 	transition: all .3s;
 	visibility: hidden;
 	display: none;
@@ -92,12 +92,13 @@ a:hover { text-decoration: none }
 	z-index: 15;
 }
 
-.site-main-menu ul > li > ul li {
+.site-main-menu:not(.menu-mobile) ul > li > ul li {
 	display: block;
 	padding-right: 15px !important;
-	text-align: center;
+	text-align: left;
+	white-space: nowrap;
 }
-.site-main-menu ul > ul > li > ul.active {
+.site-main-menu:not(.menu-mobile) ul > li > ul.active {
 	position: absolute;
 	height: auto;
 	display: block;
@@ -128,18 +129,18 @@ a:hover { text-decoration: none }
   color: #fff;
   font-size: 12px;
   font-weight: 600;
-  padding: 14px 28px;
+  padding: 14px 15px;
   display: block;
 }
 .site-main-menu ul li:first-child a {
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 
 .site-main-menu.menu-rt ul {
   text-align: right;
 }
 .site-main-menu.menu-rt ul li:last-child a {
-  padding-right: 0;
+  /* padding-right: 0; */
 }
 .header-bar-section {
 	padding: 10px 0;

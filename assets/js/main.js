@@ -116,7 +116,7 @@
       // other options
     });
 
-    $('.site-main-menu li')
+    $('.site-main-menu:not(.menu-mobile) li')
       .on('mouseover', function (e) {
         e.preventDefault();
         var $this = $(this);
