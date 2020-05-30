@@ -80,12 +80,19 @@ a:hover { text-decoration: none }
 	background: #043778;
 }
 
-.site-main-menu:not(.menu-mobile) li ul {
+/**
+ * Submenu
+ */
+
+.site-main-menu:not(.menu-mobile) li > ul {
 	transition: all .3s;
 	visibility: hidden;
 	display: none;
 	height: 0;
 	opacity: 0;
+}
+
+.site-main-menu:not(.menu-mobile) > ul > li > ul {
 	left: 0;
 	/* bottom: 0; */
 	background: #043778;
@@ -112,7 +119,20 @@ a:hover { text-decoration: none }
 	opacity: 1;
 }
 
-.site-main-menu ul > li > ul > li > ul.active {
+.site-main-menu:not(.menu-rt) ul > li > ul > li > ul.active {
+	position: absolute;
+	height: auto;
+	display: block;
+	visibility: visible;
+	opacity: 1;
+
+	right: 0;
+	top: 0;
+
+	transform: translate(100%, 0)
+}
+
+.site-main-menu.menu-rt ul > li > ul > li > ul.active {
 	position: absolute;
 	height: auto;
 	display: block;
@@ -125,6 +145,7 @@ a:hover { text-decoration: none }
 	transform: translate(-100%, 0)
 }
 
+/* End: submenu */
 
 .site-main-menu ul li a {
   color: #fff;
